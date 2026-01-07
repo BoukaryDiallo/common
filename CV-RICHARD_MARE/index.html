@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV – Richard MARE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-flex">
+
+    <!-- Cercle drapeau + texte circulaire -->
+<div class="hero-flag">
+  <svg viewBox="0 0 200 200">
+    <!-- Cercle pour texte -->
+    <defs>
+      <path id="circlePath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/>
+    </defs>
+
+    <text fill="#2563eb" font-size="10" font-weight="700">
+  <textPath id="rotatingTextPath" href="#circlePath" startOffset="0">
+    La patrie ou la mort, nous vaincrons • La patrie ou la mort, nous vaincrons
+  </textPath>
+</text>
+
+    <!-- Image du drapeau au centre -->
+    <image href="images/bf-flag.png" x="40" y="40" width="120" height="120" clip-path="circle(60px at 60px 60px)"/>
+  </svg>
+</div>
+
+    <!-- Photo et texte -->
+    <div class="hero-photo-text">
+      <div class="hero-photo">
+        <img src="images/profile.jpg" alt="Photo de Richard MARE">
+      </div>
+      <div class="hero-text">
+        <h1><span id="typing"></span></h1>
+        <p class="subtitle">
+          Étudiant en Informatique Appliquée . Licence 3 de Génie Logiciel   Développeur Web & Mobile
+        </p>
+        <div class="cta">
+          <a href="#contact"  >Me contacter</a>
+          <a href="#projects">Mes projets</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- À PROPOS -->
+<section class="section accordion">
+  <h2 class="accordion-title">À propos de moi</h2>
+  <div class="accordion-content">
+
+    <div class="hero-about">
+      <div class="about-field field-nom"><i class="fa-solid fa-user"></i> <span></span></div>
+      <div class="about-field field-prenom"><i class="fa-solid fa-user"></i> <span></span></div>
+      <div class="about-field field-age"><i class="fa-solid fa-cake-candles"></i> <span></span></div>
+      <div class="about-field field-status"><i class="fa-solid fa-heart"></i> <span></span></div>
+      <div class="about-field field-residence"><i class="fa-solid fa-map-marker-alt"></i> <span></span></div>
+      <div class="about-field field-etudes"><i class="fa-solid fa-laptop-code"></i> <span></span></div>
+      <div class="about-field field-ambition"><i class="fa-solid fa-lightbulb"></i> <span></span></div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- COMPÉTENCES -->
+<section class="section accordion">
+  <h2 class="accordion-title">Compétences</h2>
+  <div class="accordion-content">
+    <div class="skills-grid">
+      <span class="badge-skill">C</span>
+      <span class="badge-skill">JavaScript</span>
+      <span class="badge-skill">PHP</span>
+      <span class="badge-skill">Laravel</span>
+      <span class="badge-skill">React Native</span>
+      <span class="badge-skill">MySQL</span>
+      <span class="badge-skill">Git / GitHub</span>
+      <span class="badge-skill">API REST</span>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATION -->
+<section class="section accordion">
+  <h2 class="accordion-title">Mes formations</h2>
+  <div class="accordion-content">
+    <div class="carousel formation-carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <!-- Card 1 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/logo-ifoad.jpg" alt="Licence Informatique Appliquée">
+            <div class="project-body">
+              <h3>Licence Informatique Appliquée</h3>
+              <p class="muted">Université Joseph Ki-Zerbo – IFOAD</p>
+              <p class="muted">- Génie Logiciel . Licence 3 -</p>
+              <p class="year">2025-2026 – En cours</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/redaction-projet.jpeg" alt="Rédaction de projet percutant">
+            <div class="project-body">
+              <h3>Rédaction de projet</h3>
+              <p class="muted">LEO CLUB DE BOBO</p>
+              <p class="year">2025</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/secretariat.jpeg" alt="Gestion de secrétariat public">
+            <div class="project-body">
+              <h3>Gestion de secrétariat public</h3>
+              <p class="muted">Emploi partiel</p>
+              <p class="year">2018 - 2022</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/musique.jpeg" alt="Musique, chant et batterie">
+            <div class="project-body">
+              <h3>Musique, chant et batterie</h3>
+              <p class="muted">Chorale Sainte Cécile de Gon-Boussougou</p>
+              <p class="year">2019 – 2022</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/conduite-groupe.jpeg" alt="Conduite de groupe et d’équipe">
+            <div class="project-body">
+              <h3>Conduite de groupe et travail d’équipe</h3>
+              <p class="muted">Mairie de Gon-Boussougou</p>
+              <p class="year">2022</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/mentorat-jeunes.jpeg" alt="Mentorat politique des jeunes">
+            <div class="project-body">
+              <h3>Mentorat politique des jeunes</h3>
+              <p class="muted">Association PAGALAYIRI de Gon-Boussougou</p>
+              <p class="year">2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJETS -->
+<section class="section accordion" id="projects">
+  <h2 class="accordion-title">Projets clés</h2>
+  <div class="accordion-content">
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/ecommerce.jpeg" alt="E-commerce">
+            <div class="project-body">
+              <h3>E-commerce sécurisé</h3>
+              <span class="badge">Laravel</span>
+              <span class="badge">MySQL</span>
+              <p>Plateforme complète avec paiements et administration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/mobile.jpg" alt="Application mobile">
+            <div class="project-body">
+              <h3>Application étudiants</h3>
+              <span class="badge">React Native</span>
+              <span class="badge">SQLite</span>
+              <p>Application mobile fluide avec stockage local.</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-inner">
+            <img src="images/portfolio.jpeg" alt="Portfolio">
+            <div class="project-body">
+              <h3>Portfolio pro</h3>
+              <span class="badge">Laravel</span>
+              <span class="badge">Tailwind</span>
+              <p>Portfolio avec backend admin sécurisé.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev">‹</button>
+      <button class="carousel-btn next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section accordion" id="contact">
+  <h2 class="accordion-title">Contact</h2>
+  <div class="accordion-content contact-grid">
+    <a href="tel:+22665711741" class="contact-card">
+      <div class="card-bg phone-bg"></div>
+      <div class="card-content">
+        <i class="fas fa-phone"></i>
+        <span>+226 65 71 17 41</span>
+      </div>
+    </a>
+    <a href="mailto:marerichard10@email.com" class="contact-card">
+      <div class="card-bg email-bg"></div>
+      <div class="card-content">
+        <i class="fas fa-envelope"></i>
+        <span>marerichard10@email.com</span>
+      </div>
+    </a>
+    <a href="https://github.com/darkENEyes" class="contact-card" target="_blank" rel="noopener">
+      <div class="card-bg github-bg"></div>
+      <div class="card-content">
+        <i class="fab fa-github"></i>
+        <span>github.com/darkENEyes</span>
+      </div>
+    </a>
+    <a href="https://www.facebook.com/richard.mare.91011" class="contact-card" target="_blank" rel="noopener">
+      <div class="card-bg facebook-bg"></div>
+      <div class="card-content">
+        <i class="fab fa-facebook"></i>
+        <span>facebook.com/richard.mare.91011</span>
+      </div>
+    </a>
+    <div class="contact-card">
+      <div class="card-bg bf-bg"></div>
+      <div class="card-content">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Burkina Faso</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 · Richard MARE</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
