@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boukary DIALLO - Cloud & DevOps Engineer. Je conçois des infrastructures cloud scalables et automatise les déploiements.">
+  <meta name="author" content="Boukary DIALLO">
+  <meta property="og:title" content="Boukary DIALLO - Cloud & DevOps Engineer">
+  <meta property="og:description" content="Je conçois des infrastructures cloud scalables et automatise les déploiements.">
+  <meta property="og:type" content="website">
+  <title>Boukary DIALLO | Cloud & DevOps Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2d5a45',
+          },
+          fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+            display: ['Alata', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="min-h-screen antialiased">
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="font-display text-xl">
+          <span class="text-primary">Boukary</span><span class="text-gray-800 dark:text-white">Dev</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#about" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">À propos</a>
+          <a href="#experience" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Expérience</a>
+          <a href="#projects" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Projets</a>
+          <a href="#certifications" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Certifications</a>
+          <a href="#contact" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Contact</a>
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle theme">
+            <i class="fas fa-sun icon-sun hidden"></i>
+            <i class="fas fa-moon icon-moon"></i>
+          </button>
+        </nav>
+        <div class="md:hidden flex items-center gap-2">
+          <button id="theme-toggle-mobile" class="p-2" aria-label="Toggle theme">
+            <i class="fas fa-sun icon-sun hidden"></i>
+            <i class="fas fa-moon icon-moon"></i>
+          </button>
+          <button id="mobile-menu-button" class="p-2" aria-label="Menu">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <nav class="flex flex-col gap-4 pt-4 pb-2">
+          <a href="#about" class="text-gray-600 dark:text-gray-400 hover:text-primary">À propos</a>
+          <a href="#experience" class="text-gray-600 dark:text-gray-400 hover:text-primary">Expérience</a>
+          <a href="#projects" class="text-gray-600 dark:text-gray-400 hover:text-primary">Projets</a>
+          <a href="#certifications" class="text-gray-600 dark:text-gray-400 hover:text-primary">Certifications</a>
+          <a href="#contact" class="text-gray-600 dark:text-gray-400 hover:text-primary">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="hero" class="min-h-screen flex items-center pt-20 pb-12">
+      <div class="max-w-6xl mx-auto px-6 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="space-y-6">
+              <div class="animate-fade-up">
+                <p class="text-primary font-medium mb-2">Salut, je suis</p>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-gray-900 dark:text-white mb-4">
+                  Boukary DIALLO
+                </h1>
+                <h2 class="font-display text-2xl md:text-3xl text-gray-600 dark:text-gray-400">
+                  Cloud & DevOps Engineer
+                </h2>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 text-lg max-w-lg animate-fade-up animate-delay-100">
+                Je conçois des infrastructures cloud scalables et automatise les déploiements pour des applications performantes et résilientes.
+              </p>
+              <div class="flex flex-wrap gap-4 animate-fade-up animate-delay-200">
+                <a href="https://cal.com/boukary/30min" target="_blank" class="btn-primary px-6 py-3 rounded-lg font-medium inline-flex items-center gap-2">
+                  <i class="fas fa-calendar-alt"></i>
+                  Réserver un call
+                </a>
+                <a href="#contact" class="btn-outline px-6 py-3 rounded-lg font-medium inline-flex items-center gap-2">
+                  <i class="fas fa-envelope"></i>
+                  Me contacter
+                </a>
+              </div>
+              <div class="flex gap-3 pt-4 animate-fade-up animate-delay-300">
+                <a href="https://github.com/BoukaryDIALLO" target="_blank" class="social-link" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/BoukaryDiallo/" target="_blank" class="social-link" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/BoubakarPI" target="_blank" class="social-link" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-up">
+            <div class="relative">
+              <div class="profile-image w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl">
+                <img src="images/boukary_dev1.jpg" alt="Boukary DIALLO" class="w-full h-full object-cover">
+              </div>
+              <div class="absolute -z-10 top-4 left-4 w-full h-full rounded-2xl border-2 border-primary/30"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-5 reveal">
+            <div class="profile-image rounded-2xl overflow-hidden aspect-[3/4] max-w-sm mx-auto lg:mx-0">
+              <img src="https://cdn.boukary.dev/Boukary_DIALLO_Black.jpg" alt="Boukary DIALLO" class="w-full h-full object-cover object-top">
+            </div>
+          </div>
+          <div class="lg:col-span-7 reveal">
+            <span class="number-indicator">01.</span>
+            <h2 class="section-title font-display text-3xl text-gray-900 dark:text-white mt-2 mb-8">
+              À propos
+            </h2>
+            <div class="space-y-4 text-gray-600 dark:text-gray-400 mb-8">
+              <p>
+                Passionné par l'automatisation et les infrastructures cloud, je conçois et déploie des solutions robustes pour accompagner les entreprises dans leur transformation digitale.
+              </p>
+              <p>
+                Mon expertise couvre l'ensemble du cycle DevOps : de la conception d'architectures cloud à la mise en place de pipelines CI/CD, en passant par l'orchestration de conteneurs et le monitoring.
+              </p>
+            </div>
+            <div class="mb-8">
+              <h3 class="font-medium text-gray-900 dark:text-white mb-4">Domaines d'expertise</h3>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                  <i class="fas fa-chevron-right text-primary text-xs"></i>
+                  Architecture cloud (AWS, Hetzner)
+                </li>
+                <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                  <i class="fas fa-chevron-right text-primary text-xs"></i>
+                  Containerisation (Docker, K8s)
+                </li>
+                <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                  <i class="fas fa-chevron-right text-primary text-xs"></i>
+                  CI/CD (GitHub Actions, GitLab)
+                </li>
+                <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                  <i class="fas fa-chevron-right text-primary text-xs"></i>
+                  IaC (Terraform, Ansible)
+                </li>
+                <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                  <i class="fas fa-chevron-right text-primary text-xs"></i>
+                  Monitoring & Observabilité
+                </li>
+                <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                  <i class="fas fa-chevron-right text-primary text-xs"></i>
+                  Réseaux (MikroTik, VPN)
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-medium text-gray-900 dark:text-white mb-4">Stack technique</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag"><i class="fab fa-node-js mr-2"></i>AdonisJS</span>
+                <span class="skill-tag"><i class="fab fa-vuejs mr-2"></i>VueJS</span>
+                <span class="skill-tag"><i class="fab fa-docker mr-2"></i>Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">Ansible</span>
+                <span class="skill-tag"><i class="fab fa-aws mr-2"></i>AWS</span>
+                <span class="skill-tag">GitHub Actions</span>
+                <span class="skill-tag">Nginx</span>
+                <span class="skill-tag">Traefik</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag"><i class="fab fa-linux mr-2"></i>Linux</span>
+                <span class="skill-tag">MikroTik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-900/30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12 reveal">
+            <span class="number-indicator">02.</span>
+            <h2 class="section-title font-display text-3xl text-gray-900 dark:text-white mt-2 mx-auto">
+              Expérience
+            </h2>
+          </div>
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="card rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                  <div>
+                    <h3 class="font-display text-xl text-gray-900 dark:text-white">CTO & DevOps Lead</h3>
+                    <a href="https://uvatis.com" target="_blank" class="text-primary hover:underline">UVATIS LLC</a>
+                  </div>
+                  <span class="text-sm text-gray-500 mt-1 md:mt-0">2023 - Aujourd'hui</span>
+                </div>
+                <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Infrastructures cloud multi-tenant sur AWS et Hetzner
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Orchestration Docker avec Traefik en reverse proxy
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Configuration VPN et gestion réseau MikroTik RouterOS
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Pipelines CI/CD avec GitHub Actions
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Monitoring avec Prometheus et Grafana
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="tag">Docker</span>
+                  <span class="tag">AWS</span>
+                  <span class="tag">MikroTik</span>
+                  <span class="tag">CI/CD</span>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="card rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                  <div>
+                    <h3 class="font-display text-xl text-gray-900 dark:text-white">Développeur Mobile</h3>
+                    <a href="https://cortexiabf.com" target="_blank" class="text-primary hover:underline">Cortexia BF</a>
+                  </div>
+                  <span class="text-sm text-gray-500 mt-1 md:mt-0">Juil - Sept 2025</span>
+                </div>
+                <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Conception d'une app mobile Flutter pour enrôlement d'utilisateurs avec données biométriques (reconnaissance faciale et empreinte digitale)
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Mise en place d'une API en FastAPI pour la vérification de correspondance faciale avec FAISS
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Mise en place de services backend
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    CI/CD avec GitHub Actions, Docker sur Hetzner
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">FAISS</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">GitHub Actions</span>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="card rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                  <div>
+                    <h3 class="font-display text-xl text-gray-900 dark:text-white">Développeur Full Stack</h3>
+                    <a href="https://slimatgroup.com" target="_blank" class="text-primary hover:underline">Slimat Sarl</a>
+                  </div>
+                  <span class="text-sm text-gray-500 mt-1 md:mt-0">Oct 2025 - Aujourd'hui</span>
+                </div>
+                <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Développement et maintenance de backends avec AdonisJS v6
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Création d'applications mobiles multiplateformes avec Flutter
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Implémentation d'API internes, gestion d'authentification et intégration de services tiers
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Travail sur des projets connexes (outils internes, dashboards, automatisations)
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-chevron-right text-primary text-xs mt-1.5"></i>
+                    Déploiement et intégration continue sur serveurs Linux (CI/CD, Docker)
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="tag">AdonisJS</span>
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">CI/CD</span>
+                  <span class="tag">Linux</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <span class="number-indicator">03.</span>
+          <h2 class="section-title font-display text-3xl text-gray-900 dark:text-white mt-2 mx-auto">
+            Projets
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 mt-6 max-w-2xl mx-auto">
+            Une sélection de projets que j'ai développés et déployés
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="reveal">
+            <div class="project-card card card-hover h-full">
+              <div class="project-image">
+                <img src="images/projects/unet.png" alt="Unet">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <h3 class="font-display text-lg text-gray-900 dark:text-white">Unet</h3>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Plateforme SaaS multitenant de gestion de routeurs MikroTik à distance via VPN, avec hotspot, tickets et monitoring.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="tag">AdonisJS</span>
+                  <span class="tag">NuxtJS</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">MikroTik API</span>
+                  <span class="tag">Hetzner</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <a href="https://status.uvatis.com" target="_blank" class="text-primary text-sm hover:underline inline-flex items-center gap-1">
+                    Status cluster <i class="fas fa-arrow-right text-xs"></i>
+                  </a>
+                  <a href="https://unet.uvatis.com" target="_blank" class="text-gray-500 text-sm hover:underline">
+                    Plateforme
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="project-card card card-hover h-full">
+              <div class="project-image">
+                <img src="images/projects/autopro.png" alt="AB Auto">
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-lg text-gray-900 dark:text-white mb-2">AB Auto</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Application e-commerce de pièces détachées automobiles avec moteur de recherche intelligent et interface Flutter.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="tag">AdonisJS</span>
+                  <span class="tag">Flutter</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">Cloudflare R2</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <a href="https://www.abauto.pro/" target="_blank" class="text-primary text-sm hover:underline inline-flex items-center gap-1">
+                    Version web <i class="fas fa-arrow-right text-xs"></i>
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.uvatis.auto" target="_blank" class="text-gray-500 text-sm hover:underline">
+                    <i class="fab fa-google-play"></i>
+                  </a>
+                  <a href="https://apps.apple.com/us/app/auto-pro/id6744563969" target="_blank" class="text-gray-500 text-sm hover:underline">
+                    <i class="fab fa-app-store"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="project-card card card-hover h-full">
+              <div class="project-image">
+                <img src="images/projects/fasomaths.png" alt="Fasomaths">
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-lg text-gray-900 dark:text-white mb-2">Fasomaths</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Application mobile éducative pour les élèves de Terminale au Burkina Faso, avec exercices corrigés et assistance IA.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="tag">AdonisJS</span>
+                  <span class="tag">Flutter</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">Redis</span>
+                  <span class="tag">Cloudflare</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <a href="https://fasomaths.uvatis.com" target="_blank" class="text-primary text-sm hover:underline inline-flex items-center gap-1">
+                    Site officiel <i class="fas fa-arrow-right text-xs"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="project-card card card-hover h-full">
+              <div class="project-image">
+                <img src="images/projects/qbcplus.png" alt="QBC-PLUS">
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-lg text-gray-900 dark:text-white mb-2">QBC-PLUS</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Extension web d'une boutique physique de quincaillerie avec paiement mobile Ligdicash. Déployé sur VPS.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="tag">AdonisJS</span>
+                  <span class="tag">Inertia + Vue</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">Ligdicash</span>
+                </div>
+                <a href="https://www.qbcplus.net" target="_blank" class="text-primary text-sm hover:underline inline-flex items-center gap-1">
+                  Version web <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="project-card card card-hover h-full">
+              <div class="project-image">
+                <img src="images/projects/sinoexpress.png" alt="Sino Express">
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-lg text-gray-900 dark:text-white mb-2">Sino Express</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Plateforme d'accompagnement pour étudiants souhaitant obtenir une bourse en Chine et sourcing pour importateurs.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="tag">NextJS</span>
+                  <span class="tag">TailwindCSS</span>
+                  <span class="tag">Storybook</span>
+                </div>
+                <a href="https://www.sinoexpress-et-academie.fr/" target="_blank" class="text-primary text-sm hover:underline inline-flex items-center gap-1">
+                  Site officiel <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="project-card card card-hover h-full">
+              <div class="project-image">
+                <img src="images/projects/stockify.png" alt="Stockify">
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-lg text-gray-900 dark:text-white mb-2">Stockify</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Application web de gestion de stock avec statistiques, gestion d'inventaire et interface responsive.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="tag">Django</span>
+                  <span class="tag">Bootstrap</span>
+                  <span class="tag">Charts.js</span>
+                </div>
+                <a href="https://github.com/BoubakarPI/stockify.boukary.dev" target="_blank" class="text-primary text-sm hover:underline inline-flex items-center gap-1">
+                  Code source <i class="fab fa-github text-xs ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="project-card card card-hover h-full">
+              <div class="project-image">
+                <img src="images/projects/lsnb.png" alt="LSNB-BF">
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-lg text-gray-900 dark:text-white mb-2">LSNB-BF.org</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Site officiel du Lycée Scientifique National de Bobo-Dioulasso. Développé avec Odoo et modules Python personnalisés.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="tag">Odoo</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">PostgreSQL</span>
+                </div>
+                <a href="https://lsnb.odoo.com" target="_blank" class="text-primary text-sm hover:underline inline-flex items-center gap-1">
+                  Site officiel <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="card card-hover h-full flex flex-col items-center justify-center p-8 text-center min-h-[300px]">
+              <div class="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-4">
+                <i class="fab fa-github text-2xl text-primary"></i>
+              </div>
+              <h3 class="font-display text-lg text-gray-900 dark:text-white mb-2">Plus de projets</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Découvrez mes autres projets et contributions open source
+              </p>
+              <a href="https://github.com/BoukaryDIALLO" target="_blank" class="btn-outline px-5 py-2 rounded-lg text-sm">
+                Voir mon GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="certifications" class="py-20 bg-gray-50 dark:bg-gray-900/30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <span class="number-indicator">04.</span>
+          <h2 class="section-title font-display text-3xl text-gray-900 dark:text-white mt-2 mx-auto">
+            Certifications
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="reveal">
+            <h3 class="font-display text-lg text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+              <i class="fas fa-certificate text-primary"></i>
+              Obtenues
+            </h3>
+            <div class="space-y-4">
+              <a href="https://www.udemy.com/certificate/UC-99532e20-daa6-4ff8-afb5-18c5fe8cab77/" target="_blank" class="cert-card block hover:bg-gray-50 dark:hover:bg-gray-800/50 -ml-4 pl-4 py-2 rounded-r transition-colors">
+                <h4 class="font-medium text-gray-900 dark:text-white">JavaScript complet avec HTML5 et CSS3</h4>
+                <p class="text-sm text-gray-500">Udemy <i class="fas fa-external-link-alt text-xs ml-1"></i></p>
+              </a>
+              <a href="https://www.udemy.com/certificate/UC-9a58f52e-be0b-4718-8fe5-6bd42e550cd1/" target="_blank" class="cert-card block hover:bg-gray-50 dark:hover:bg-gray-800/50 -ml-4 pl-4 py-2 rounded-r transition-colors">
+                <h4 class="font-medium text-gray-900 dark:text-white">Certificat de Formation ReactJS</h4>
+                <p class="text-sm text-gray-500">Udemy <i class="fas fa-external-link-alt text-xs ml-1"></i></p>
+              </a>
+              <a href="https://www.udemy.com/certificate/UC-0574fe32-5bd2-4728-9389-ee44a64ed114/" target="_blank" class="cert-card block hover:bg-gray-50 dark:hover:bg-gray-800/50 -ml-4 pl-4 py-2 rounded-r transition-colors">
+                <h4 class="font-medium text-gray-900 dark:text-white">Python pour le Machine Learning</h4>
+                <p class="text-sm text-gray-500">Udemy <i class="fas fa-external-link-alt text-xs ml-1"></i></p>
+              </a>
+              <a href="https://www.udemy.com/certificate/UC-aa6003a6-94fe-43cd-babe-b1fefd08a45a/" target="_blank" class="cert-card block hover:bg-gray-50 dark:hover:bg-gray-800/50 -ml-4 pl-4 py-2 rounded-r transition-colors">
+                <h4 class="font-medium text-gray-900 dark:text-white">Fondamentaux des services financiers</h4>
+                <p class="text-sm text-gray-500">Udemy <i class="fas fa-external-link-alt text-xs ml-1"></i></p>
+              </a>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 class="font-display text-lg text-gray-500 mb-6 flex items-center gap-2">
+              <i class="fas fa-spinner"></i>
+              En cours
+            </h3>
+            <div class="space-y-6">
+              <div class="card rounded-lg p-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center flex-shrink-0">
+                    <i class="fab fa-aws text-orange-500"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-medium text-gray-900 dark:text-white">AWS Solutions Architect</h4>
+                    <p class="text-xs text-gray-500 mb-2">Amazon Web Services</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">60%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card rounded-lg p-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-dharmachakra text-blue-500"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-medium text-gray-900 dark:text-white">Kubernetes Administrator (CKA)</h4>
+                    <p class="text-xs text-gray-500 mb-2">CNCF</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 30%"></div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">30%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card rounded-lg p-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-code-branch text-purple-500"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-medium text-gray-900 dark:text-white">Terraform Associate</h4>
+                    <p class="text-xs text-gray-500 mb-2">HashiCorp</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 10%"></div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">Planifié</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center reveal">
+          <span class="number-indicator">05.</span>
+          <h2 class="font-display text-3xl text-gray-900 dark:text-white mt-2 mb-6">
+            Travaillons ensemble
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Je suis ouvert aux opportunités en <span class="text-primary font-medium">DevOps</span>,
+            <span class="text-primary font-medium">Cloud Engineering</span> et
+            <span class="text-primary font-medium">Platform Engineering</span>.
+          </p>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            Que vous ayez besoin d'aide pour mettre en place une infrastructure cloud, automatiser vos déploiements ou optimiser vos pipelines CI/CD, je serais ravi d'en discuter.
+          </p>
+          <a href="mailto:hello@boukary.dev" class="btn-primary px-8 py-4 rounded-lg font-medium inline-flex items-center gap-2 text-lg">
+            <i class="fas fa-envelope"></i>
+            hello@boukary.dev
+          </a>
+          <div class="flex justify-center gap-4 mt-8">
+            <a href="https://github.com/BoukaryDIALLO" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/BoukaryDiallo/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="https://x.com/BoubakarPI" target="_blank" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="https://cal.com/boukary/30min" target="_blank" class="social-link" aria-label="Calendrier">
+              <i class="fas fa-calendar-alt text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="py-8 border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <p>Conçu et développé par Boukary DIALLO</p>
+        <p>© 2025 Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
